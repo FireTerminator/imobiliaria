@@ -1,0 +1,206 @@
+
+/* Reset CSS */
+*, *:after, *:before{
+  margin: 0;
+  padding: 0;
+}
+/* Fundo do menu */
+.menu{
+  background: #000;
+}
+/* Remove as bolinhas do lado das listas */
+.menu .menu-list, .menu .sub-menu{
+  list-style: none;
+}
+/* Configura todos os links do nosso menu */
+.menu a{
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing:0.2em;
+}
+/* Faz os <li>s ficarem na horizontal */
+.menu > .menu-list > li{
+  float: left;
+  position: relative;
+}
+/* Configura os links do menu principal */
+.menu > .menu-list > li > a {
+  padding: 20px;
+  margin: 0 5px;
+  background: #000;
+}
+/* Configura o fundo do menu principal quando com mouse hover */
+.menu > .menu-list > li:hover a {
+  background: #000;
+}
+/* Mostra o submenu no evento de mouse hover */
+.menu > .menu-list > li:hover > .sub-menu {
+  display: block;
+}
+/* Configura o estilo do submenu */
+.menu > .menu-list > li > .sub-menu {
+  position: absolute;
+  top: 50px;
+  left: 5px;
+  background: blue;
+  min-width: 10px;
+  z-index: 1000;
+  display: none;
+}
+/* Configura os links do submenu */
+.menu > .menu-list > li > .sub-menu > li > a {
+ padding: 10px 20px;
+}
+
+/*Configura o fundo sub-menu quando haver a passagem do mause*/
+.menu > .menu-list > li > .sub-menu > li:hover a{
+  background: #444;
+}
+/* Clearfix para o menu */
+.menu:after {
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.form {
+  background-color: #eee;
+
+  padding-left: 15px;
+  
+  border: #ccc 1px dotted;
+  
+  margin-top: 1em;
+
+   position: relative;
+    width: 80%;
+
+}
+
+h2 {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #DDD;
+  padding-left: 5px;
+  margin: 0 0 0 -15px;
+  font-weight: normal;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+label{
+  font-weight: bold;
+}
+
+select{
+  width: 200px;
+   height: 30px;
+   font-size: 15px;
+   background: #f2f2f3;
+}
+/* teste de sobreposição*/
+
+.fundo {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.surgir {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.surgir1{
+  top: 30%;
+  left: 90%;
+}
+.surgir2{
+  top:  70%;
+  left: 90%;
+}
+.form:hover .fundo {
+  opacity: 0.3;
+}
+
+.form:hover .surgir {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+} 
